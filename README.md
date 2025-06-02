@@ -1,83 +1,83 @@
-# Typst Template for HWR (Berlin School of Economics and Law)
+# Typst-Vorlage für die HWR (Hochschule für Wirtschaft und Recht Berlin)
 
-Welcome! This repository offers two Typst templates (English and German) designed to help you write your papers following the HWR style guidelines.
+Willkommen! Dieses Repository enthält zwei Typst-Vorlagen (Deutsch und Englisch), mit denen man wissenschaftliche Arbeiten nach den Richtlinien der HWR schreiben kannst.
 
-## What is Typst?
+## Was ist Typst?
 
-Typst is a modern, user-friendly typesetting system that makes creating beautiful documents easy and fun. If you’re new to Typst, you can learn more [here](https://typst.app/docs/).
+Typst ist ein modernes, benutzerfreundliches Textsatzsystem, das das Erstellen schöner Dokumente einfach und angenehm macht. Wenn man Typst noch nicht kennst, kannst man [hier mehr erfahren](https://typst.app/docs/).
 
-### Using Typst
+### Typst verwenden
 
-You can work with Typst **online** right away at [typst.app](https://typst.app/) — no installation needed!
+Man kannst Typst ganz einfach **online** nutzen unter [typst.app](https://typst.app/) – ganz ohne Installation!
 
-If you prefer to work **locally** on your computer, just follow the [official installation guides](https://github.com/typst/typst#installation) to set it up easily.
+Falls man lieber **lokal** auf deinem Computer arbeitest, folge einfach den [offiziellen Installationsanleitungen](https://github.com/typst/typst#installation), um Typst einzurichten.
 
-## Preview the Templates
+## Vorschau der Vorlage
 
-Want to see how the templates look? Check out the [`preview`](https://github.com/Testspieler09/ptb_template/tree/preview) branch to get a quick visual.
+Du möchtest sehen, wie die Vorlage aussieht? Schau dir den [`preview`](https://github.com/Testspieler09/ptb_template/tree/preview)-Branch an, um einen schnellen Eindruck zu bekommen.
 
-## Getting Started
+## Erste Schritte
 
-1. **Fork or clone** this repository to your computer.
-2. Open the files and start customizing your paper!
+1. **Forke** dieses Repository oder **klone** es auf deinen Computer.
+2. Öffne die Dateien und beginne damit, deine Arbeit anzupassen!
 
-## Template Structure
+## Struktur der Vorlage
 
-To help you get started quickly and customize easily, the template is organized like this:
+Damit man schnell loslegen und die Vorlage leicht anpassen kannst, ist das Projekt wie folgt aufgebaut:
 
 ```
 .
-├── assets
-│   ├── bib      # Your bibliography entries and citation styles go here
-│   └── images   # Put any images you want to use in your paper here
-├── blocks       # Contains all the page components that are combined in main.typ
+├── ressourcen
+│   ├── bib      # Literaturverzeichnisse und Zitierstile kommen hier rein
+│   └── bilder   # Hierhin gehören alle Bilder, die in deiner Arbeit verwendet werden hin
+├── blocks       # Enthält alle einzelnen Bausteine, die in main.typ zusammengeführt werden
 ├── LICENSE
-├── main.typ     # The main file that pulls everything together into one document
+├── main.typ     # Die Hauptdatei, die alle Bestandteile zusammenführt
 └── README.md
 ```
 
-This setup makes it easy to add new sections, update references, or swap images without hassle.
+Diese Struktur macht es einfach, neue Abschnitte hinzuzufügen, Quellen zu aktualisieren oder Bilder auszutauschen.
 
-You can find the **german** version on the [`de`](https://github.com/Testspieler09/ptb_template/tree/de) branch
+Die **englische** Version ist im [`main`](https://github.com/Testspieler09/ptb_template/)-Branch zu finden.
 
-### Dependencies
+### Abhängigkeiten
 
-This template makes use of two Typst packages to add extra functionality:
+Diese Vorlage nutzt zwei Typst-Pakete, um zusätzliche Funktionen bereitzustellen:
 
-* [`glossarium`](https://typst.app/universe/package/glossarium/) – for managing glossaries
-* [`acrostiche`](https://typst.app/universe/package/acrostiche/) – for handling acronyms easily
+* [`glossarium`](https://typst.app/universe/package/glossarium/) – zur Verwaltung von Glossaren
+* [`acrostiche`](https://typst.app/universe/package/acrostiche/) – zur einfachen Handhabung von Abkürzungen
 
-These are fetched automatically when compiling the document, so you don’t need to install them manually.
+Diese Pakete werden beim Kompilieren automatisch geladen – man muss sie also nicht manuell installieren.
 
-### Quick Shoutout
+### Kleiner Shoutout
 
-Big thanks to [**Patrick O'Brien**](https://github.com/POBrien333) for creating the citation style file used in this template. You can find it at:
+Ein großes Dankeschön an [**Patrick O'Brien**](https://github.com/POBrien333) für die Erstellung der Zitierstil-Datei, die in dieser Vorlage verwendet wird. Sie ist hier zu finden:
 
 ```
-assets/bib/hwr_citation.csl
+ressourcen/bib/hwr_zitierweise.csl
 ```
 
-Original source: [Berlin School of Economics and Law CSL Style](https://github.com/citation-style-language/styles/blob/master/berlin-school-of-economics-and-law-international-marketing-management.csl)
+Originalquelle: [Berlin School of Economics and Law CSL Style](https://github.com/citation-style-language/styles/blob/master/berlin-school-of-economics-and-law-international-marketing-management.csl)
 
-> [!NOTE]
-> To use the custom citation style, make sure to set the bibliography like this in your Typst file:
+> \[!NOTE]
+> Um diesen benutzerdefinierten Zitierstil zu verwenden, setze die folgende Einstellung in der `main.typ` Datei folgendermaßen:
 >
 > ```typst
 > #set bibliography(
->   style: "assets/bib/hwr_citation.csl",
+>   style: "ressourcen/bib/hwr_zitierweise.csl",
 > )
 > ```
 
-## How to Create a PDF
+## PDF erstellen
 
-Once you’ve made your changes, you can compile your document into a PDF by running this command in the root folder of the project:
+Sobald man Änderungen vorgenommen hat, kann man das Dokument mit folgendem Befehl im Projektordner in eine PDF-Datei umwandeln:
 
 ```bash
 typst compile main.typ
 ```
 
-This will generate a `main.pdf` file with your paper ready to go.
+Dadurch wird eine Datei `main.pdf` erstellt, die deine fertige Arbeit enthält.
 
-## Need Help or Want to Contribute?
+## Hilfe oder Feedback?
 
-If you run into any issues or have ideas to improve the template, please open an issue or submit a pull request. Your feedback is always welcome!
+Wenn du Fragen hast, auf Probleme stößt oder Ideen zur Verbesserung der Vorlage hast, öffne gerne ein Issue oder sende einen Pull Request. Dein Feedback ist immer willkommen!

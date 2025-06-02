@@ -1,22 +1,27 @@
 #import "@preview/glossarium:0.5.6": make-glossary, register-glossary, print-glossary
 #import "@preview/acrostiche:0.5.2": init-acronyms, print-index, acr
 
-#import "blocks/constants.typ": research_title, authors, date_of_publication
+#import "blocks/konstanten.typ": ptb_titel, autoren, datum_der_veroeffentlichung
 
-// SETUP Glossary and Acronyms
+#set document(author: autoren, title: ptb_titel)
+#set page(numbering: none, number-align: center)
+#set text(font: "Libertinus Serif", lang: "de")
+
+// SETUP Glossar und Acronyme
 #show: make-glossary
-#import "blocks/glossary.typ": glossary, acronym-list
-#register-glossary(glossary)
-#init-acronyms(acronym-list)
+#import "blocks/glossar.typ": glossar, akronym-liste
+#register-glossary(glossar)
+#init-acronyms(akronym-liste)
 
-// SETUP Biblography
+// SETUP Literatur
 #set bibliography(
-  style: "ieee", // Change according to needs (assets/bib/hwr_citation.csl is also a valid option)
+  title: "Literaturverzeichnis",
+  style: "ieee", // Nach belieben verändern (ressourcen/bib/hwr_zitierweise.csl ist auch eine Option)
 )
-#let bib = bibliography("assets/bib/literatur.bib")
+#let bib = bibliography("ressourcen/bib/literatur.bib")
 
 // SETUP Main Body
-#include "blocks/title.typ"
+#include "blocks/titelblatt.typ"
 #pagebreak()
 
 // Abstract
@@ -29,42 +34,42 @@
 
 #set par(justify: true)
 
-// Note on Gender-Inclusive Language
-#include "blocks/note.typ"
+// Hinweis zur geschlechterneutraler Sprache
+#include "blocks/hinweis.typ"
 #pagebreak()
 
-// Introduction
-#include "blocks/intro.typ"
+// Einleitung
+#include "blocks/einleitung.typ"
 #pagebreak()
 
-// Main content
-#include "blocks/content.typ"
+// Inhalt
+#include "blocks/inhalt.typ"
 #pagebreak()
 
-// Declaration of authorship
-#include "blocks/declaration_of_authorship.typ"
+// Ehrenwörtliche Erklärung
+#include "blocks/ehrenwoertliche_erklaerung.typ"
 #pagebreak()
 
-// Glossary
+// Glossar
 #set heading(numbering: none)
 #set page(numbering: "I")
-= Glossary
-#print-glossary(glossary)
+= Glossar
+#print-glossary(glossar)
 #pagebreak()
 
 // Acronyms
-#print-index(outlined: true, title: "Acronyms")
+#print-index(outlined: true, title: "Akronyme")
 #pagebreak()
 
-// Biblography
+// Literaturverzeichnis
 #bib
 #pagebreak()
 
-// List of Figures
-#let outline_title = "List of Figures"
-#hide[#heading(outline_title)]
-#outline(title: outline_title, target: figure.where(kind: image))
+// Abbildungsverzeichnis
+#let verzeichnis_titel = "Abbildungsverzeichnis"
+#hide[#heading(verzeichnis_titel)]
+#outline(title: verzeichnis_titel, target: figure.where(kind: image))
 #pagebreak()
 
-// Appendix
-#include "blocks/appendix.typ"
+// Anhang
+#include "blocks/anhang.typ"

@@ -1,23 +1,23 @@
-#let glossary = (
+#let glossar = (
   (
     key: "html",
     short: "HTML",
     long: "Hypertext Markup Language",
-    description: "A standard language for creating web pages",
+    description: "Ein Standard zur Erstellung von Webseiten",
     group: "Web"
   ),
   (
     key: "css",
     short: "CSS",
     long: "Cascading Style Sheets",
-    description: "A stylesheet language used for describing the presentation of a document",
+    description: "Eine Stylesheet-Sprache zur Gestaltung von Dokumenten",
     group: "Web"
   ),
   (
     key: "tps",
     short: "TPS",
     long: "test procedure specification",
-    description: "A formal document describing test steps and expected results",
+    description: "Ein formales Dokument mit Testschritten und erwarteten Ergebnissen",
     plural: "TPSes",
     longplural: "test procedure specifications"
   ),
@@ -28,8 +28,8 @@
   )
 )
 
-#let acronym-list = (
-  "WTP": ("Wonderful Typst Package", "Wonderful Typst Packages"),
+#let akronym-liste = (
+  "WTP": ("Wunderbares Typst-Paket", "Wunderbare Typst-Pakete"),
   "HTML": ("Hypertext Markup Language"),
   "CSS": ("Cascading Style Sheets"),
 )

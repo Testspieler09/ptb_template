@@ -6,7 +6,7 @@
     numbering: none,
     text(0.85em, smallcaps[Abstract]),
   )
-  // Put the content here
+  // Inhalt hier einfügen
   #lorem(136)
 ]
 #v(1.618fr)
