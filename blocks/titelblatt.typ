@@ -29,7 +29,7 @@
 )
 
 // Mittlere Sektion
-#align(center, text(1.1em, [vorgelegt am  #datum_der_veroeffentlichung]))
+#text(1.1em, [vorgelegt am  #datum_der_veroeffentlichung])
 #v(0.6em, weak: true)
 $circle.filled.small$
 #v(0.6em, weak: true)
