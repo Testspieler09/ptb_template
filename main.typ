@@ -1,7 +1,7 @@
 #import "@preview/glossarium:0.5.6": make-glossary, register-glossary, print-glossary
 #import "@preview/acrostiche:0.5.2": init-acronyms, print-index, acr
 
-#import "blocks/konstanten.typ": ptb_titel, autoren, datum_der_veroeffentlichung
+#import "bausteine/konstanten.typ": ptb_titel, autoren, datum_der_veroeffentlichung
 
 #set document(author: autoren, title: ptb_titel)
 #set page(numbering: none, number-align: center)
@@ -9,7 +9,7 @@
 
 // SETUP Glossar und Acronyme
 #show: make-glossary
-#import "blocks/glossar.typ": glossar, akronym-liste
+#import "bausteine/glossar.typ": glossar, akronym-liste
 #register-glossary(glossar)
 #init-acronyms(akronym-liste)
 
@@ -21,11 +21,11 @@
 #let bib = bibliography("ressourcen/bib/literatur.bib")
 
 // SETUP Main Body
-#include "blocks/titelblatt.typ"
+#include "bausteine/titelblatt.typ"
 #pagebreak()
 
 // Abstract
-#include "blocks/abstract.typ"
+#include "bausteine/abstract.typ"
 #pagebreak()
 
 // Content outline
@@ -35,19 +35,19 @@
 #set par(justify: true)
 
 // Hinweis zur geschlechterneutraler Sprache
-#include "blocks/hinweis.typ"
+#include "bausteine/hinweis.typ"
 #pagebreak()
 
 // Einleitung
-#include "blocks/einleitung.typ"
+#include "bausteine/einleitung.typ"
 #pagebreak()
 
 // Inhalt
-#include "blocks/inhalt.typ"
+#include "bausteine/inhalt.typ"
 #pagebreak()
 
 // Ehrenwörtliche Erklärung
-#include "blocks/ehrenwoertliche_erklaerung.typ"
+#include "bausteine/ehrenwoertliche_erklaerung.typ"
 #pagebreak()
 
 // Glossar
@@ -72,4 +72,4 @@
 #pagebreak()
 
 // Anhang
-#include "blocks/anhang.typ"
+#include "bausteine/anhang.typ"

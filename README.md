@@ -30,7 +30,7 @@ Damit man schnell loslegen und die Vorlage leicht anpassen kannst, ist das Proje
 ├── ressourcen
 │   ├── bib      # Literaturverzeichnisse und Zitierstile kommen hier rein
 │   └── bilder   # Hierhin gehören alle Bilder, die in deiner Arbeit verwendet werden hin
-├── blocks       # Enthält alle einzelnen Bausteine, die in main.typ zusammengeführt werden
+├── bausteine    # Enthält alle einzelnen Bausteine, die in main.typ zusammengeführt werden
 ├── LICENSE
 ├── main.typ     # Die Hauptdatei, die alle Bestandteile zusammenführt
 └── README.md
